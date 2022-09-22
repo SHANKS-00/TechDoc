@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+<title>
+TECHNICAL DOCUMENTATION
+</title>
+</head>
+<body>
+  <nav id="navbar">
+  <header>Python Documentation</header>
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    
+    
+    <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+    
+    <li>
+      <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+    </li>
+    
+    <li><a class="nav-link" href="#Constants">Comments</a></li>
+    <li><a class="nav-link" href="#Data_types">Data types</a></li>
+    <li>
+      <a class="nav-link" href="#if...else_statement">if...else statement</a>
+    </li>
+    <li><a class="nav-link" href="#while_statement">while statement</a></li>
+    
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <article>
+      <p>
+        Python is a widely used general-purpose, high level programming language.
+      </p>
+
+      <p>
+         It was created by Guido van Rossum in 1991 and further developed by the Python Software Foundation. 
+      </p>
+      <ul>
+        <li>
+          Designed with an emphasis on code readability.
+        </li>
+        <li>
+          Its syntax allows programmers to express their concepts in fewer lines of code.
+        </li>
+      </ul>
+    </article>
+  </section>
+  
+  <section class="main-section" id="Hello_world">
+    <header>Hello world</header>
+    <article>
+      The classical Hello World program is used for illustrating Python Program
+      <code
+        >print("Hello, world!")
+      </code>
+
+      Python programs can be developed and executed on multiple operating system platforms.
+    </article>
+  </section>
+  
+  <section class="main-section" id="Declaring_variables">
+    <header>Declaring variables</header>
+    <article>
+      You can declare a variable in three ways:
+      <p>
+        In other programming languages like C, C++, and Java, you will need to declare the type of variables but in Python you don’t need to do that.
+      </p>
+      <p>
+        Just type in the variable and when values will be given to it, then it will automatically know whether the value given would be an int, float, or char or even a String.
+      </p>
+      <p>
+        # Python program to declare variables
+myNumber = 3
+print(myNumber)
+  
+myNumber2 = 4.5
+print(myNumber2)
+  
+myNumber ="helloworld"
+print(myNumber)
+      </p>
+    </article>
+  </section>
+ 
+  <section class="main-section" id="Comments">
+    <header>Comments</header>
+    <article>
+      <p>
+        A comment in Python starts with the hash character, #, and extends to the end of the physical line.       </p>
+
+      <code># defining the code</code>
+      <p>
+        Single-Line Comments
+Such a comment starts with a hash character (#), and is followed by text that contains further explanations
+      </p>
+
+      <p>
+       You can also write a comment next to a code statement. The next example shows that:
+
+# define the general structure of the product with default values
+product = {
+    "productId": 0,          # product reference id, default: 0
+    "description": "",       # item description, default: empty
+    "categoryId": 0,         # item category, default: 0
+    "price": 0.00            # price, default: 0.00
+}
+      </p>
+
+      <p>
+        Multi-Line Comments
+As already mentioned above, an entire comment block is also understood by Python. These comments serve as in-line documentation for others reading your code, and explain things in more detail, usually.Technically Python doesn't have explicit support for multi-line comments, so the following options are considered a workaround by some, but still work for the purpose of multi-line comments.
+
+Version 1 combines single-line comments as follows:
+      </p>
+
+      <code
+        ># LinuxThingy version 1.6.5
+#
+# Parameters:
+#
+# -t (--text): show the text interface
+# -h (--help): display this help</code
+      >
+      Version 2 is simpler than version 1. It's originally intended to be used for creating documentation (see more about this below), but it can also be used for multi-line comments.
+      <code
+        >"""
+LinuxThingy version 1.6.5
+
+Parameters:
+
+-t (--text): show the text interface
+-h (--help): display this help
+"""
+Note that the latter version needs to be enclosed in special quotation marks (""") to work, and not hash characters.</code
+      >
+    </article>
+  </section>
+  <section class="main-section" id="Data_types">
+    <header>Data types</header>
+    <article>
+      <p>Built-in Data Types
+In programming, data type is an important concept.
+
+Variables can store data of different types, and different types can do different things.
+
+Python has the following data types built-in by default, in these categories:</p>
+      <ul>
+        <li>
+          <p>They Are:</p>
+          <ul>
+            <li>Text Type:  str</li>
+            <li>
+              Numeric Types:  int, float, complex
+            </li>
+            <li>Sequence Types: list, tuple, range</li>
+            <li>Mapping Type: dict</li>
+            <li>Boolean Type: bool</li>
+            <li>
+             Binary Types:  bytes, bytearray, memoryview
+            </li>
+          </ul>
+        </li>
+
+        <li>Getting the Data Type</li>
+      </ul>
+      You can get the data type of any object by using the type() function:
+
+Example
+Print the data type of the variable x:
+
+x = 5
+print(type(x))
+
+    </article>
+  </section>
+  <section class="main-section" id="if...else_statement">
+    <header>if...else statement</header>
+    <article>
+      Use the if statement to execute a statement if a logical condition is
+      true. Use the optional else clause to execute a statement if the condition
+      is false. An if statement looks as follows:
+
+      <code>if (condition): </code>
+      An "if statement" is written by using the if keyword.
+
+Example
+If statement:
+
+a = 33
+b = 200
+if b > a:
+  print("b is greater than a")
+      <p>
+        Elif
+The elif keyword is pythons way of saying "if the previous conditions were not true, then try this condition".
+      </p>
+      <code
+        >Example
+a = 33
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+      </code>
+      In this example a is equal to b, so the first condition is not true, but the elif condition is true, so we print to screen that "a and b are equal".
+
+      <code
+        >Else
+The else keyword catches anything which isn't caught by the preceding conditions.
+
+Example
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("a is greater than b")</code
+      >
+      In this example a is greater than b, so the first condition is not true, also the elif condition is not true, so we go to the else condition and print to screen that "a is greater than b".You can also have an else without the elif:
+      <code>Example
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+else:
+  print("b is not greater than a")</code> Short Hand If
+If you have only one statement to execute, you can put it on the same line as the if statement.
+
+      <code>Example
+One line if statement:
+
+if a > b: print("a is greater than b")</code>
+    </article>
+  </section>
+  <section class="main-section" id="while_statement">
+    <header>while statement</header>
+    <article>
+      A while statement executes its statements as long as a specified condition
+      evaluates to true. A while statement looks as follows:
+
+      <code>While expression: statement (s)</code> If the condition becomes false,
+      statement within the loop stops executing and control passes to the
+      statement following the loop.
+
+      <p>
+        The condition test occurs before statement in the loop is executed. If
+        the condition returns true, statement is executed and the condition is
+        tested again. If the condition returns false, execution stops and
+        control is passed to the statement following while.
+      </p>
+
+      <p>
+        The break Statement
+With the break statement we can stop the loop even if the while condition is true:
+      </p>
+
+      Example:
+
+      <p>The following while loop uses break</p>
+
+      <code>
+Exit the loop when i is 3:
+
+i = 1
+while i < 6:
+  print(i)
+  if i == 3:
+    break
+  i += 1
+</code>
+      <p>
+        The continue Statement
+With the continue statement we can stop the current iteration, and continue with the next:
+      </p>
+
+      <ul>
+        <li>Example:</li>
+        <li>Continue to the next iteration if i is 3:</li>
+        <li>i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue
+  print(i)</li>
+      </ul>
+      <p>
+        in above example the continue statement is used.
+      </p>
+    </article>
+  </section>
+  
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <ul>
+        <li>
+          the documentation in this page is taken from
+          <a
+            href="https://www.w3schools.com/python/python_while_loops.asp"
+            target="_blank"
+            >w3schools</a
+          >
+        </li>
+      </ul>
+    </article>
+  </section>
+</main>
+
+
+</body>
+</html>
